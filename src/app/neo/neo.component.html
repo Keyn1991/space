@@ -1,0 +1,15 @@
+<div *ngIf="neoBrowseData">
+    <h2>Neo Browse Data</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>NASA JPL URL</th>
+        </tr>
+        <tr *ngFor="let neo of neoBrowseData.near_earth_objects">
+            <td>{{ neo.id }}</td>
+            <td>{{ neo.name }}</td>
+            <td><a href="{{ neo.nasa_jpl_url }}">{{ neo.nasa_jpl_url }}</a></td>
+        </tr>
+    </table>
+</div>
